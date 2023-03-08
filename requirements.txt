@@ -1,2 +1,3 @@
 python-dotenv
 regex
+py-cord~=2.4.0
