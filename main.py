@@ -21,6 +21,9 @@ allowed_mentions = discord.AllowedMentions(everyone=False)
 bot = Bot(command_prefix=commands.when_mentioned_or(PREFIX), owner_id=114352655857483782, intents=intents,
           allowed_mentions=allowed_mentions)
 
+bot.remove_command("help")
+
+
 # Load cogs
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
