@@ -1,0 +1,5 @@
+PREFIX = "!"
+
+# Colours
+MAIN = 0x83B942
+RED = 0xE0495F

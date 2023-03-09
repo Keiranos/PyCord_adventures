@@ -4,6 +4,7 @@ import asyncio
 import os
 from dotenv import load_dotenv
 from os import getenv
+from config import PREFIX
 
 load_dotenv()
 
@@ -17,7 +18,7 @@ intents = discord.Intents.all()
 allowed_mentions = discord.AllowedMentions(everyone=False)
 
 
-bot = Bot(command_prefix=commands.when_mentioned_or("!"), owner_id=114352655857483782, intents=intents,
+bot = Bot(command_prefix=commands.when_mentioned_or(PREFIX), owner_id=114352655857483782, intents=intents,
           allowed_mentions=allowed_mentions)
 
 # Load cogs
