@@ -6,9 +6,9 @@ class TestCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    @discord.slash_command(name="ping", description="I love men.")
-    async def ping(self, ctx: discord.ApplicationContext):
-        await ctx.respond(content="hello there!", ephemeral=False)
+    @discord.slash_command(name="echo", description="repeat after me")
+    async def echo(self, ctx: discord.ApplicationContext, echotext):
+        await ctx.respond(content=f" You said: {echotext}", ephemeral=False)
 
 
 def setup(bot: commands.Bot):
